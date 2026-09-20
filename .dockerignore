@@ -1,0 +1,37 @@
+# Build & Artifacts
+target/
+*.jar
+*.war
+*.ear
+
+# Version Control & IDEs
+.git/
+.gitignore
+.gitattributes
+.github/
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.settings/
+.project
+.classpath
+
+# Logs & Environment Files
+*.log
+logs/
+.env
+.env.*
+.env.local
+
+# Temporary & OS Files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+node_modules/
+*.zip
+*.tar
+*.gz
+*.rar

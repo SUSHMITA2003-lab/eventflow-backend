@@ -42,6 +42,18 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests(auth -> auth
 
+                        // CORS preflight requests must always be permitted
+                        .requestMatchers(
+                                HttpMethod.OPTIONS,
+                                "/**"
+                        ).permitAll()
+
+                        // Health check endpoint for Render monitoring (public)
+                        .requestMatchers(
+                                HttpMethod.GET,
+                                "/api/health"
+                        ).permitAll()
+
                         // Normal USER registration is public
                         .requestMatchers(
                                 HttpMethod.POST,
